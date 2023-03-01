@@ -1,8 +1,9 @@
 const css_regex = "/\\.css$/";
 
-export function webpackFinal(config = {}, options = {}) {
+const postcssModules = {
+webpackFinal(config: { module: { rules: any[]; }; }, options: any) {
   const cssRule = config.module.rules.find(
-    (_) => _ && _.test && _.test.toString() === css_regex
+    (_: { test: { toString: () => string; }; }) => _ && _.test && _.test.toString() === css_regex
   );
 
   return {
@@ -11,7 +12,7 @@ export function webpackFinal(config = {}, options = {}) {
       ...config.module,
       rules: [
         ...config.module.rules.filter(
-          (_) => _ && _.test && _.test.toString() !== css_regex
+          (_: { test: { toString: () => string; }; }) => _ && _.test && _.test.toString() !== css_regex
         ),
         {
           ...cssRule,
@@ -20,7 +21,7 @@ export function webpackFinal(config = {}, options = {}) {
         {
           ...cssRule,
           test: /\.module\.css$/,
-          use: cssRule.use.map((_) => {
+          use: cssRule.use.map((_: { loader: string; options: any; }) => {
             if (_ && _.loader && _.loader.match(/[\/\\]css-loader/g)) {
               return {
                 ..._,
@@ -39,4 +40,7 @@ export function webpackFinal(config = {}, options = {}) {
       ],
     },
   };
+ }
 }
+
+ export default postcssModules
