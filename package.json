@@ -1,10 +1,10 @@
 {
   "name": "@wesbitty/postcss-preset-modules",
   "description": "CSS Modules support for storybook",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "lib/index.js",
-  "file": [
+  "files": [
     "lib",
     "LICENSE",
     "README",
