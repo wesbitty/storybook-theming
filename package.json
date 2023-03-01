@@ -1,0 +1,35 @@
+{
+  "name": "@wesbitty/postcss-preset-modules",
+  "description": "CSS Modules support for storybook",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "file": [
+    "lib",
+    "LICENSE",
+    "README",
+    "./package.json"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc --declaration --outDir lib --declarationMap",
+    "clean": "bash -c 'rm -rf lib'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesbitty/postcss-preset-modules.git"
+  },
+  "keywords": [
+    "preset-modules",
+    "postcss",
+    "storybook"
+  ],
+  "author": "Wesbitty, Inc",
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "typescript": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.2"
+  }
+}
