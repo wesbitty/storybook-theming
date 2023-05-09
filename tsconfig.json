@@ -3,10 +3,9 @@
     "allowJs": true,
     "checkJs": false,
     "baseUrl": ".",
+    "outDir": "lib",
     "incremental": false,
     "noImplicitAny": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "jsx": "react",
     "module": "commonjs",
     "skipDefaultLibCheck": true,
@@ -17,6 +16,6 @@
     "types": [],
     "lib": ["es2017", "dom"]
   },
-  "include": ["src"],
-  "exclude": ["**/dist", "node_modules", "**/node_modules"]
+  "include": ["src/"],
+  "exclude": ["**/lib", "node_modules"]
 }
