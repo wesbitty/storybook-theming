@@ -1,9 +1,9 @@
 {
   "name": "@wesbitty/storybook-theming",
   "description": "storybook addon for configuring popular styling tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
-  "main": "lib/preset.js",
+  "main": "index.js",
   "sideEffects": false,
   "keywords": [
     "storybook",
@@ -17,15 +17,10 @@
   },
   "author": "Wesbitty Inc",
   "files": [
-    "lib",
+    "index.js",
     "LICENSE",
-    "README",
-    "package.json"
+    "README"
   ],
-  "scripts": {
-    "build": "tsc",
-    "clean": "bash -c 'rm -rf lib'"
-  },
   "devDependencies": {
     "@types/node": "^17.0.25",
     "typescript": "^4.9.4"
